@@ -1,11 +1,10 @@
 const connectButton = document.getElementById('connectButton');
-const dataContainer = document.getElementById('dataContainer'); // สร้าง Element สำหรับแสดงข้อมูล
+const dataContainer = document.getElementById('dataContainer'); 
 
 async function connectToDevice() {
   try {
     const options = {
       acceptAllDevices: true // อนุญาตให้เชื่อมต่อกับอุปกรณ์ Bluetooth ทุกตัว
-      // สามารถเพิ่มตัวกรอง (filter) หากคุณต้องการระบุประเภทของอุปกรณ์ที่ต้องการเชื่อมต่อ
     };
 
     const device = await navigator.bluetooth.requestDevice(options);
